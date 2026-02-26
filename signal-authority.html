@@ -139,20 +139,20 @@
     text-align: left;
   }
 
-  /* Row 1 — Typical Tools (red, matches Fire Hose card) */
-  .meter-row:nth-child(1) .meter-label { color: var(--red-700); }
-  .meter-row:nth-child(1) .meter-bar  { width: 95%; background: linear-gradient(90deg, var(--red-400), var(--red-500)); }
-  .meter-row:nth-child(1) .meter-value { color: var(--red-600); }
+  /* Row — Typical Tools (red, matches Fire Hose card) */
+  .meter-row-red .meter-label { color: var(--red-700); }
+  .meter-row-red .meter-bar  { width: 95%; background: linear-gradient(90deg, var(--red-400), var(--red-500)); }
+  .meter-row-red .meter-value { color: var(--red-600); }
 
-  /* Row 2 — Filtered Tools (amber, matches Silent Treatment card) */
-  .meter-row:nth-child(2) .meter-label { color: var(--amber-600); }
-  .meter-row:nth-child(2) .meter-bar  { width: 60%; background: linear-gradient(90deg, var(--amber-400), var(--amber-500)); }
-  .meter-row:nth-child(2) .meter-value { color: var(--amber-600); }
+  /* Row — Filtered Tools (amber, matches Silent Treatment card) */
+  .meter-row-amber .meter-label { color: var(--amber-600); }
+  .meter-row-amber .meter-bar  { width: 60%; background: linear-gradient(90deg, var(--amber-400), var(--amber-500)); }
+  .meter-row-amber .meter-value { color: var(--amber-600); }
 
-  /* Row 3 — MatterOS (green, matches Signal Authority card) */
-  .meter-row:nth-child(3) .meter-label { color: #166534; }
-  .meter-row:nth-child(3) .meter-bar  { width: 12%; background: linear-gradient(90deg, var(--green-500), var(--green-600)); }
-  .meter-row:nth-child(3) .meter-value { color: #166534; }
+  /* Row — MatterOS (green, matches Signal Authority card) */
+  .meter-row-green .meter-label { color: #166534; }
+  .meter-row-green .meter-bar  { width: 12%; background: linear-gradient(90deg, var(--green-500), var(--green-600)); }
+  .meter-row-green .meter-value { color: #166534; }
 
   .meter-caption {
     text-align: center;
@@ -336,27 +336,8 @@
     .how-card:hover { transform: none; }
   }
 </style>
-  <link rel="stylesheet" href="nav.css">
 </head>
 <body>
-
-<!-- ═══ NAV ═══ -->
-<nav class="mtr-nav">
-  <div class="mtr-nav-inner">
-    <a href="index.html" class="mtr-nav-logo">Matter<span>OS</span></a>
-    <div class="mtr-nav-links">
-      <a href="index.html" class="mtr-nav-link"><span class="nav-icon">&#127968;</span> Overview</a>
-      <div class="mtr-nav-divider"></div>
-      <a href="policy-whiplash.html" class="mtr-nav-link "><span class="nav-icon">&#127754;</span> Policy Whiplash</a>
-      <a href="command-bridge.html" class="mtr-nav-link "><span class="nav-icon">&#128207;</span> Command Bridge</a>
-      <a href="signal-authority.html" class="mtr-nav-link active"><span class="nav-icon">&#127919;</span> Signal Authority</a>
-    </div>
-    <div class="mtr-nav-cta">
-      <a href="#" class="btn-demo">Request Demo &#8594;</a>
-    </div>
-  </div>
-</nav>
-
 
 <!-- ═══ HERO ═══ -->
 <div class="hero">
@@ -377,17 +358,17 @@
       </div>
       <div class="noise-meter">
         <h3>Notification Volume vs. Attorney Attention</h3>
-        <div class="meter-row">
+        <div class="meter-row meter-row-red">
           <div class="meter-label">Typical Tools</div>
           <div class="meter-bar-wrap"><div class="meter-bar"></div></div>
           <div class="meter-value">~47 / day</div>
         </div>
-        <div class="meter-row">
+        <div class="meter-row meter-row-amber">
           <div class="meter-label">Filtered Tools</div>
           <div class="meter-bar-wrap"><div class="meter-bar"></div></div>
           <div class="meter-value">~18 / day</div>
         </div>
-        <div class="meter-row">
+        <div class="meter-row meter-row-green">
           <div class="meter-label">MatterOS</div>
           <div class="meter-bar-wrap"><div class="meter-bar"></div></div>
           <div class="meter-value">2–3 / week</div>
